@@ -1,0 +1,7 @@
+<mat-chip-list>
+  <mat-chip *ngFor="let user of userData.list.entries; let i = index" [color]="'accent'" [selected]="user.entry.enabled"
+    [removable]="user.entry.enabled" (removed)="remove(i)">
+    {{ user.entry.firstName }} {{ user.entry.lastName }}
+    <mat-icon matChipRemove *ngIf="user.entry.enabled">cancel</mat-icon>
+  </mat-chip>
+</mat-chip-list>
